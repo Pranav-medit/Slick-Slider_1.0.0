@@ -1,8 +1,12 @@
 <div [style.width]='style.width' [style.height]='style.height' class="div div__cauroselWrapper">
-  <ngb-carousel animation wrap='true' interval='2000'    *ngIf="data" [showNavigationArrows]="true" [showNavigationIndicators]="false">
+  <div class="div div__imgCover" style='height:50%;'>
+
+  </div>
+  <ngb-carousel animation wrap='true' [interval]='interval'    *ngIf="data" [showNavigationArrows]="true" [showNavigationIndicators]="false">
     <ng-template   ngbSlide *ngFor="let subData of data">
       <div    class="picsum-img-wrapper">
         <img  [style.width]='style.width' [style.height]='style.height' [src]="subData.image" alt="Random slide">
+        
       </div>
       <div class="carousel-caption">
         <p><a id="a__carousel-caption" [href]='subData.link'>{{subData.para}}</a></p>

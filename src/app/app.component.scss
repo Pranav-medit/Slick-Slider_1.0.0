@@ -1,16 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+//Variables
+$carousel-caption-color:White;
+$carousel-caption-font-size:2rem;
+$carousel-caption-font-weight: 400;
+
+$gradient-from-color:rgba(0,0,0,1);
+$gradient-to-color:rgba(0,0,0,0);
+
 #a__carousel-caption{
-  color:White;
+  color:$carousel-caption-color ;
   text-decoration: none;
   font-family: 'Oswald', sans-serif;
-  font-size: 2em;
-  font-weight: 400;
+  font-size: $carousel-caption-font-size;
+  font-weight: $carousel-caption-font-weight;
+  z-index:1;
 }
-.div__cauroselWrapper img{
+.div__cauroselWrapper{
+  position:relative;
+  & img{
     transition: .5s;
+  }
+  //Blur on hover
+  &:hover img{
+    filter: blur(4px);
+  }
 }
-.div__cauroselWrapper:hover img{
- transition: .5s;
- filter: blur(4px);
+//This is gradient color from bottom to top above image
+.div__imgCover{
+  position: absolute;
+  top:50%;
+  width:100%;
+  background-image: linear-gradient(0deg,$gradient-from-color,$gradient-to-color);
+  z-index: 1;
 }
