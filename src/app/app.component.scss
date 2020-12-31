@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+#a__carousel-caption{
+  color:White;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+}
+.div__cauroselWrapper img{
+    transition: .5s;
+}
+.div__cauroselWrapper:hover img{
+ transition: .5s;
+ filter: blur(4px);
+}
